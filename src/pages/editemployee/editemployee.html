@@ -1,0 +1,59 @@
+<!--
+  Generated template for the EditemployeePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Edit employee</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+
+    <form (ngSubmit)="update()">
+        <ion-item>
+          <ion-label>First name : </ion-label>
+          <ion-input type="text" [(ngModel)]="data.name" name="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Last name : </ion-label>
+            <ion-input type="text" [(ngModel)]="data.lname" name="lname"   ></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>Age : </ion-label>
+              <ion-input type="nubmer" [(ngModel)]="data.age" name="age"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Salary : </ion-label>
+                <ion-input type="nubmer" [(ngModel)]="data.salary" name="salary"></ion-input>
+              </ion-item>
+
+            <ion-item>
+            <ion-label>Gender</ion-label>
+            <ion-select [(ngModel)]="data.gender" name="gender">
+              <ion-option value="Female">Female</ion-option>
+              <ion-option value="Male">Male</ion-option>
+            </ion-select>
+          </ion-item>
+            <ion-item>
+                <ion-label>Date</ion-label>
+                <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="data.date" name="date"></ion-datetime>
+              </ion-item>
+
+        <button ion-button type="submit" block  color="secondary">Update</button>
+      </form>
+
+
+
+
+</ion-content>
